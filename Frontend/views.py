@@ -29,7 +29,7 @@ class NewMovie(TemplateView):
     def get(self, request):
 
         form = MovieForm()
-        movies = Movie.objects.all()
+        movies = Movie.objects.all().order_by('-release_date')
         
         return render(request, 
                       template_name="Frontend/add_movie.html", 

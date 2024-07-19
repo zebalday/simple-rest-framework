@@ -53,6 +53,7 @@
                 <th>Movie</th>
                 <th>Director</th>
                 <th>Category</th>
+                <th>Year</th>
             </tr>
         </thead>
         <tbody>
@@ -61,6 +62,7 @@
                 <td>{{movie.name}}</td>
                 <td>{{movie.director.name}}</td>
                 <td>{{movie.category}}</td>
+                <td>{{movie.release_date|date:'Y'}}</td>
               </tr>
             {% endfor %}
         </tbody>

@@ -27,7 +27,7 @@ class DirectorForm(ModelForm):
         }
 
         model = Director
-        fields = '__all__'
+        fields = ('name', 'birthday', 'country')
         widgets = {
             'name': forms.TextInput(attrs={'class':'form-input',
                                            'required':True,
@@ -71,7 +71,7 @@ class MovieForm(ModelForm):
         }
 
         model = Movie
-        fields = '__all__'
+        fields = ('name', 'release_date', 'category', 'director', 'description')
         widgets = {
             'name': forms.TextInput(attrs={'class':'form-input',
                                            'required':True,
