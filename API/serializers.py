@@ -2,7 +2,7 @@ from rest_framework import serializers
 from Backend.models import Director, Movie
 
 
-class DirectorSerializer(serializers.Serializer):
+class DirectorSerializer(serializers.ModelSerializer):
 
     class Meta:
 
@@ -10,7 +10,7 @@ class DirectorSerializer(serializers.Serializer):
         fields = "__all__"
 
 
-class MovieSerializer(serializers.Serializer):
+class MovieSerializer(serializers.ModelSerializer):
 
     class Meta:
 

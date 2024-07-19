@@ -6,9 +6,12 @@
     <h2>API URLS</h2>
 
     <ol>
-        <li><a href="{% url "API:director-api-list" %}">Director LIST VIEW</a></li>
-        <li><a href="{% url "API:movie-api-list" %}">Movie LIST VIEW</a></li>
+        <li><a href="{% url "API:director-apiview" %}">LIST VIEW: Director</a></li>
+        <li><a href="{% url "API:movie-apiview" %}">LIST VIEW: Movie</a></li>
+        <li><a href="{% url "API:viewsets:director-list" %}">VIEWSETS: Director</a></li>
+        <li><a href="{% url "API:viewsets:movie-list" %}">VIEWSETS: Movie</a></li>
         <li><a href="{% url "Frontend:add-director" %}">Add Director</a></li>
+        <li><a href="{% url "Frontend:add-movie" %}">Add Movie</a></li>
     </ol>
 
 </div>

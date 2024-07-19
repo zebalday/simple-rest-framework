@@ -7,7 +7,7 @@
         margin: 1.5rem, auto;
     }
     .form-input{
-        margin: 1rem auto;
+        margin: 0.5rem auto;
     }
     button{
         background-color: black;
@@ -31,9 +31,9 @@
 
 <div>
 
-    <h3 style="text-decoration: underline;">New Director</h3>
+    <h3 style="text-decoration: underline;">New Movie</h3>
 
-    <form action="{% url 'Backend:add-director' %}" method="POST">
+    <form action="{% url 'Backend:add-movie' %}" method="POST">
         {% csrf_token %}
         {{form.as_div|safe}}
         <button type="submit">Submit</button>
@@ -50,17 +50,17 @@
             color: white;
             text-align: center;
             ">
-                <th>Name</th>
-                <th>Nationality</th>
-                <th>Birthday</th>
+                <th>Movie</th>
+                <th>Director</th>
+                <th>Category</th>
             </tr>
         </thead>
         <tbody>
-            {% for director in directors %}
+            {% for movie in movies %}
               <tr>
-                <td>{{director.name}}</td>
-                <td>{{director.country}}</td>
-                <td>{{director.birthday}}</td>
+                <td>{{movie.name}}</td>
+                <td>{{movie.director.name}}</td>
+                <td>{{movie.category}}</td>
               </tr>
             {% endfor %}
         </tbody>
